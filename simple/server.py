@@ -1,3 +1,9 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "fastmcp",
+# ]
+# ///
 from fastmcp import FastMCP
 
 mcp = FastMCP("Math Server 🧮")
