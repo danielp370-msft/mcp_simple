@@ -80,6 +80,11 @@ The goal of this project is to create a concise example MCP (Model Context Proto
    - Include a pyproject.toml file for modern Python packaging and dependency specification.
    - Ensure compatibility with Linux, macOS, and Windows for cross-platform development.
    - Leverage UV's features for lockfile management, reproducible resolutions, and efficient dependency deduplication.
+   - After cloning the repository, ensure that the FastMCP dependency is added to the server by running the following command:
+     ```bash
+     uv add --script simple/server.py fastmcp
+     ```
+     This step ensures that the server is properly configured to use FastMCP.
 
 ## Development Steps
 
