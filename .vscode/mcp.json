@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "math-server": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "${workspaceFolder}/simple/server.py"],
+    }
+  }
+}
