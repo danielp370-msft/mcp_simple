@@ -16,6 +16,10 @@ The goal of this project is to create a concise example MCP (Model Context Proto
    - FastMCP server should be created using the Pythonic decorator-based syntax for tools.
    - Use stdio transport exclusively, which is ideal for direct integration with model providers and simple testing.
    - Configure the server to run with stdio transport, making it easier to pipe input and output directly to and from the server.
+   - Extend the server to support both stdio (default) and SSE transport types.
+   - Allow specifying the transport type and port number via command-line arguments.
+   - Default port number for SSE transport should be 8069.
+   - Ensure compatibility with FastMCP's transport options.
    - Implement the server with the recommended `if __name__ == "__main__":` block pattern for maximum compatibility with all MCP clients.
    - Follow the FastMCP best practice where each server runs in its own process, allowing clients to manage multiple servers independently.
 
@@ -61,10 +65,15 @@ The goal of this project is to create a concise example MCP (Model Context Proto
    - Configure and use stdio transport mechanism:
      - stdio: For direct integration with model providers through standard input/output streams
      - Include examples of piping input to the server and processing its output
+   - Include examples of running the server with SSE transport:
+     ```bash
+     uv run python -m simple.server --transport sse --port 8069
+     ```
    - Ensure the server is designed to handle the stdio transport behavior where:
      - The client starts a new server process for each session
      - Communication happens through standard input/output streams
      - The server process terminates when the client disconnects
+   - Document the new transport options and their configurations in the project documentation.
 
 2. **Documentation**
    - Provide clear and concise documentation covering:
